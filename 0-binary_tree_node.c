@@ -16,10 +16,17 @@ binary_tree_t *binary_tree_node(binary_tree_t *parent, int value)
 	if (nu_nod == 0)
 		return (NULL);
 
-	nu_nod->n = value;
-	nu_nod->parent = parent;
-	nu_nod->left = NULL;
-	nu_nod->right = NULL;
+	*nu_nod = (binary_tree_t){
+		.n = value,
+		.parent = parent,
+		.left = NULL,
+		.right = NULL
+	};
+
+	/*nu_nod->n = value;*/
+	/*nu_nod->parent = parent;*/
+	/*nu_nod->left = NULL;*/
+	/*nu_nod->right = NULL;*/
 
 	return (nu_nod);
 }
